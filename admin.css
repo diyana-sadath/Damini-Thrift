@@ -1,0 +1,136 @@
+﻿html,
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-header {
+  background-color: #ccffcc;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+
+  z-index: 1000;
+}
+
+.sub-header {
+  background-color: grey;
+  padding: 10px;
+  position: sticky;
+  color: white;
+  top: 120px;
+  text-align: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+  padding: 20px;
+  margin-top: -30px;
+}
+
+nav ul li a {
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: -20px;
+  color: black;
+}
+
+nav ul li a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  background-color: #f0e68c;
+  padding: 150px 200px 150px 200px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  flex-direction: column;
+}
+main h1 {
+  text-align: center;
+  font-size: 50px;
+  align-items: center;
+}
+
+.fac-main {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.start {
+  background: white;
+  color: black;
+  height: 400px;
+  text-align: center;
+  font-size: 37.5px;
+  align-items: center;
+  padding: 200px 100px 200px 100px;
+}
+
+section {
+  background: #2e2787;
+  color: white;
+  padding: 30px 25px 30px 25px;
+  margin: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+h2 {
+  color: white;
+}
+
+button {
+  background-color: #f0ead6;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+.settings {
+  background-color: #5aa2d6;
+  padding: 40px 200px 50px 200px;
+  text-align: center;
+  font-size: 37.5px;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  text-align: center;
+
+  background: black;
+
+  color: white;
+
+  width: 100%;
+  padding: 10px 0; /* Added padding for better spacing */
+}

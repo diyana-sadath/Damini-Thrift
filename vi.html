@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <style>
+        /* Pastel Green Theme */
+        :root {
+            --pastel-green: #b8e6c1;
+            --light-green: #d5f3e3;
+            --dark-green: #5c946e;
+            --button-green: #82cbb2;
+            --text-green: #4f704d;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--light-green);
+            color: var(--text-green);
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 30px;
+            color: var(--dark-green);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        input[type="file"] {
+            margin: 20px;
+            padding: 10px;
+            background-color: var(--button-green);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        input[type="file"]:hover {
+            background-color: var(--dark-green);
+        }
+
+        button {
+            padding: 12px 30px;
+            background-color: var(--button-green);
+            border: none;
+            color: white;
+            border-radius: 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: var(--dark-green);
+        }
+
+        img {
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        #resultImg {
+            animation: popIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2em;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1> Try it on!! </h1>
+
+    <h2>Upload Your Picture:</h2>
+    <input type="file" id="personUpload" accept="image/*" />
+
+    <h2>Show Us the Accessory/Garment:</h2>
+    <input type="file" id="garmentUpload" accept="image/*" />
+    
+    <br>
+    <button onclick="applyVirtualTryOn()">Try On!</button>
+
+    <!-- Display uploaded and processed images -->
+    <h2>Your Uploaded Picture:</h2>
+    <img id="personImg" src="" alt="Your picture" />
+
+    <h2>Uploaded Accessory/Garment:</h2>
+    <img id="garmentImg" src="" alt="What you wanna try on" />
+
+    <h2>Result Image:</h2>
+    <img id="resultImg" src="" alt="How its gonna look" />
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

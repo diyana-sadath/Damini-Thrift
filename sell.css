@@ -1,0 +1,43 @@
+a {
+  color: #ccffcc;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a:hover {
+  color: black;
+}
+/* Basic CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+
+.content {
+  margin: 170px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 70px;
+  color: #ccffcc;
+}
+
+p {
+  font-size: 1.2rem;
+  color: white;
+}
